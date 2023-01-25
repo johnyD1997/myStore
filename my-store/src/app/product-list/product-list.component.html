@@ -1,1 +1,26 @@
-<p>Products</p>
+<h2>Products</h2>
+<div class="products-flex">
+<div *ngFor="let product of products" class="product" >
+    <img [src]= "product.ImagePath" />
+
+    <h3>
+        <a [title]="product.name + ' details'">
+            {{ product.name }}
+        </a>
+        
+    </h3>
+    
+    <p *ngIf="product.description">
+        Description: {{ product.description }}
+    </p>
+    
+    <button (click)="share()">
+        Share
+    </button>
+    
+    <app-product-alerts
+    [product]="product"
+    (notify)="onNotify()">
+    </app-product-alerts>
+</div>
+</div>
