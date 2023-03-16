@@ -1,11 +1,11 @@
-img{
-    width: 200px;
-    height: 200px;
+/* .product-img{
+  height: 100%;
+  max-width: 400px;
 }
 
 .products-flex{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
 }
@@ -13,4 +13,26 @@ img{
 .product {
     width: 300px;
     height: 400px;
+    margin: 2rem;
+} */
+
+h2{
+  padding: 8px 0;
+  color: #1976D2;
+  margin: 2rem;
+}
+
+p:hover{
+cursor: pointer;
+}
+
+.price{
+  font-weight:bolder;
+  /* margin-top: -20px; */
+}
+
+.head-img{
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
 }

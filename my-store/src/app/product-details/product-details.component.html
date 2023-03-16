@@ -1,0 +1,18 @@
+<h4 class="mt-2 ">Product Details</h4>
+
+<div class="card p-3 mb-3 mt-2 d-flex flex-row" *ngIf="product">
+  <img [src]="product.imgUrl" class="img-fluid p-4 col-6 h-100 align-self-center"/>
+  <div class="col-6">
+    <h3>{{ product.name }}</h3>
+    <p>{{ product.description }}</p>
+    
+      <h4 class="mt-4">{{ product.price | currency }}</h4>
+      <button 
+      (click)="addToCart(product)" 
+      class="btn btn-success mt-2"> Add to Cart
+      </button>
+  </div>  
+</div>
+<div class="pt-2">
+  <app-backbtn></app-backbtn>
+</div>

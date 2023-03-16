@@ -1,0 +1,36 @@
+
+
+  <h3 class="text-center">Cart</h3>
+  
+  
+  <div class="cart-item bg-light p-3" *ngFor="let item of items">
+    <h6>My Order</h6>
+    <span>{{ item.name }}</span>
+    <span class="ms-5"><strong>{{ item.price | currency }}</strong></span>
+  </div>
+  
+  <div class="card card-style">
+    <form class="mt-4 mb-4" [formGroup]="checkoutForm" 
+    (ngSubmit)="onSubmit(checkoutForm.value)">
+    <div>
+      <h4 class="mb-4 text-center">Checkout</h4>
+      <label class="ms-3 mb-3">Name</label>
+      <input class="ms-4 mb-3" type="text" formControlName="name">
+    </div>
+    
+    <div class="mb-5">
+      <label class="ms-3">Address</label>
+      <input class="ms-2" type="text" formControlName="address">
+    </div>
+    <div class="d-flex justify-content-between">
+      <button class="btn btn-success ms-3" type="submit">Purchase</button>
+        <a routerLink="/shipping"  class="align-self-center">Shipping Prices</a>
+    </div>
+    
+  </form>
+  
+  
+</div>
+<div class="pt-2 ms-3 mt-4">
+  <app-backbtn></app-backbtn>
+</div>
